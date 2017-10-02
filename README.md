@@ -1,5 +1,9 @@
 # ASP.NET Docker image
 
+Author: Lander Van den Bulcke
+
+Disclaimer: This was made as a school assignment. Therefore, no guarantees in terms of quality/functionality. ;)
+
 ## Docker compose
 
 ### Preparing application
