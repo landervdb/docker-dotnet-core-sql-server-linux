@@ -1,24 +1,24 @@
 # SQL Server Docker image
 
-## Image builden
+## Build image
 
 ```bash
 $ docker build --nocache -t landervdb/sql-server-demo .
 ```
 
-## Container aanmaken
+## Create container
 
 ```bash
 $ docker run -d --name sql-server-demo -p 1433:1433 landervdb/sql-server-demo
 ```
 
-## Container stoppen
+## Stop container
 
 ```bash
 $ docker stop sql-server-demo
 ```
 
-## Container starten
+## Start container
 
 ```bash
 $ docker start sql-server-demo

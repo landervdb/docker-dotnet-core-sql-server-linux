@@ -2,7 +2,7 @@
 
 ## Docker compose
 
-### Applicatie klaarmaken
+### Preparing application
 
 ```bash
 $ cd app
@@ -11,27 +11,27 @@ $ dotnet publish -c Release -o out
 $ cd ..
 ```
 
-### Hele stack runnen
+### Run entire stack
 
 ```bash
 $ docker-compose up -d
 ```
 
-### Stack stoppen
+### Stop stack
 
 ```bash
 $ docker-compose stop
 ```
 
-### Stack stoppen en images verwijderen
+### Stop stack and remove images
 
 ```bash
 $ docker-compose down
 ```
 
-## Handmatig
+## Manual
 
-### Image builden
+### Building the image
 
 ```bash
 $ cd app
@@ -41,27 +41,27 @@ $ cd ..
 $ docker build -t landervdb/dotnet-demo .
 ```
 
-### Container aanmaken
+### Create container
 
 ```bash
 $ docker run --name dotnet-demo -p 5000:5000 --link sql-server-demo -e SQLSERVER_HOST=sql-server-demo -d landervdb/dotnet-demo
 ```
 
-Dit commando gaat er van uit dat er reeds een sql-server container draait met de naam `sql-server-demo` (zie de submap sql-server).
+This command assumes there is already a sql-server container running with the name `sql-server-demo` (see `sql-server` folder).
 
-### Container stoppen
+### Stop container
 
 ```bash
 $ docker stop dotnet-demo
 ```
 
-### Container starten
+### Start container
 
 ```bash
 $ docker start dotnet-demo
 ```
 
-## Gemaakte aanpassingen in source code applicatie
+## Changes made in application code
 
 - Program.cs:
 
@@ -88,13 +88,13 @@ var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhos
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connString));
 ```
 
-- Algemeen:
+- General:
 
 ```bash
 $ dotnet migrate
 ```
 
-## Bronnen
+## Sources
 
 - http://blog.kontena.io/dot-net-core-and-sql-server-in-docker/
 - https://github.com/DataGrip/docker-env/tree/master/mssql-server-linux
