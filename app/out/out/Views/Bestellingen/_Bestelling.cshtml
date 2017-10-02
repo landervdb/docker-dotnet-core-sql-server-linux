@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DienstenCheques.Models.ViewModels.BestellingenViewModels.BestellingViewModel>
+
+<p>
+    <a asp-action="Nieuw" class="btn btn-primary">Plaats een nieuwe bestelling</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Referentie
+        </th>
+        <th>
+            Datum bestelling
+        </th>
+        <th>
+            Elektronisch
+        </th>
+        <th class="text-right">
+            Hoeveelheid
+        </th>
+        <th class="text-right">
+           Zichtwaarde
+        </th>
+        <th class="text-right">
+            Totaal bedrag
+        </th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @item.BestellingId
+        </td>
+        <td>
+            @item.CreatieDatum.Date.ToString("d")
+        </td>
+        <td class="text-center">
+            <input type="checkbox" @(item.Elektronisch ? "checked" : "") disabled />
+        </td>
+        <td class="text-right">
+            @item.AantalCheques
+        </td>
+        <td class="text-right">
+            @item.Zichtwaarde.ToString("N0") €
+        </td>
+        <td class="text-right">
+            @item.TotaalBedrag.ToString("N0") €
+        </td>
+    </tr>
+}
+
+
+</table>

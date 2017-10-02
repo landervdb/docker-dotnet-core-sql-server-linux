@@ -1,0 +1,9 @@
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/bin/Release/netcoreapp1.0/app.deps.json
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/bin/Release/netcoreapp1.0/app.runtimeconfig.json
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/bin/Release/netcoreapp1.0/app.runtimeconfig.dev.json
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/bin/Release/netcoreapp1.0/app.dll
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/bin/Release/netcoreapp1.0/app.pdb
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/obj/Release/netcoreapp1.0/UserSecretsAssemblyInfo.cs
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/obj/Release/netcoreapp1.0/app.AssemblyInfo.cs
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/obj/Release/netcoreapp1.0/app.dll
+/Users/lander/p2ops-g09/opdracht04/oplossingen/demo/app/obj/Release/netcoreapp1.0/app.pdb

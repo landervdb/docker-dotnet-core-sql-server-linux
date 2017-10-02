@@ -1,0 +1,39 @@
+﻿@model DienstenCheques.Models.ViewModels.BestellingenViewModels.NieuwViewModel
+
+@{
+    ViewData["Title"] = "Plaats een nieuwe bestelling";
+}
+
+<h2>Plaats een nieuwe bestelling voor dienstencheques met zichtwaarde @Model.Zichtwaarde.ToString("N0") €</h2>
+<hr />
+
+<form method="post">
+        <div asp-validation-summary="All"></div>  
+    <div class="checkbox form-group">
+        <label asp-for="Elektronisch">
+            <input asp-for="Elektronisch" />Elektronisch
+        </label>
+        <span asp-validation-for="Elektronisch" class="text-danger"></span>
+
+    </div>
+
+        <div class="form-group">
+            <label asp-for="AantalCheques"></label>
+            <input asp-for="AantalCheques" class="form-control" />
+            <span asp-validation-for="AantalCheques" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DebiteerDatum"></label>
+            <input asp-for="DebiteerDatum" asp-format="{0:d}" class="form-control" />
+            <span asp-validation-for="DebiteerDatum" class="text-danger"></span>
+        </div>
+
+        <input type="submit" value="Plaats bestelling" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-default">Cancel</a>
+</form>
+
+
+@section Scripts {
+    @{  Html.RenderPartial("_ValidationScriptsPartial"); }
+}
